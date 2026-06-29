@@ -111,7 +111,7 @@ export const solutions = [
       { icon: 'fas fa-map-marked-alt', title: 'PAN India Reach', text: 'Serving businesses across India through 33,000+ pin codes and an extensive transportation network.' },
       { icon: 'fas fa-cogs', title: 'Flexible Logistics Solutions', text: 'From routine deliveries to complex project movements, our solutions are tailored to business requirements.' },
       { icon: 'fas fa-headset', title: 'Dedicated Customer Support', text: 'A single point of contact ensures smooth communication and shipment coordination.' },
-      { icon: 'fas fa-award', title: '20+ Years of Logistics Experience', text: 'Trusted by businesses across industries for reliable and solution-driven logistics services.' },
+      { icon: 'fas fa-award', title: '10+ Years of Logistics Experience', text: 'Trusted by businesses across industries for reliable and solution-driven logistics services.' },
       { icon: 'fas fa-shield-alt', title: 'Secure Handling & Transportation', text: 'Careful handling practices to minimize transit risks and protect critical components.' },
     ],
     faqs: [

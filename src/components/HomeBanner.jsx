@@ -43,7 +43,7 @@ function HomeBanner() {
                                         <i className="fa-solid fa-check-circle"></i>
                                         <div className="feature-content">
                                             <h6 className="fw-bold mb-0">
-                                                20+ Years of Experience
+                                                10+ Years of Experience
                                             </h6>
                                         </div>
                                     </div>

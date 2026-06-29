@@ -4,7 +4,7 @@ export const PAGE_SEO = {
   home: {
     title: `${BRAND} | Nationwide Logistics, Courier & Supply Chain`,
     description:
-      'HariOm Express delivers FTL, PTL, LTL, air cargo, warehousing, 3PL, 4PL, and specialized logistics across India with 33,000+ pin codes and 20+ years of experience.',
+      'HariOm Express delivers FTL, PTL, LTL, air cargo, warehousing, 3PL, 4PL, and specialized logistics across India with 33,000+ pin codes and 10+ Years of Experience.',
     keywords:
       'HariOm Express, logistics solutions, courier services, FTL, PTL, LTL, air cargo, warehousing, 3PL, 4PL, supply chain India',
   },
