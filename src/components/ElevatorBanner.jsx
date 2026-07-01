@@ -106,7 +106,7 @@ function ElevatorBanner() {
                                 <form id="elevator-quote-form" className="track-form" action="thankyou.html" method="GET">
                                     
                                     <div className="row g-2 w-100 m-0 p-0">
-                                        <div className="col-6 p-0 pe-1">
+                                        <div className="col-12 col-md-6 p-0 pe-md-1 mb-2 mb-md-0">
                                             <input 
                                                 type="text" 
                                                 id="form-name" 
@@ -116,7 +116,7 @@ function ElevatorBanner() {
                                                 required 
                                             />
                                         </div>
-                                        <div className="col-6 p-0 ps-1">
+                                        <div className="col-12 col-md-6 p-0 ps-md-1">
                                             <input 
                                                 type="email" 
                                                 id="form-email" 
