@@ -28,7 +28,7 @@ function WarehouseBanner() {
                 <div className="banner-wrapper">
                     <div className="row align-items-center g-0 g-md-5">
                         {/* Left Side Content */}
-                        <div className="col-lg-7">
+                        <div className="col-lg-7 order-2 order-md-1">
                             <h1 className="fw-bold display-6 mb-3 text-uppercase text-white text-start">
                                 Reliable Warehousing Solutions That Scale With Your Business
                             </h1>
@@ -82,7 +82,7 @@ function WarehouseBanner() {
                             </div>
 
                             {/* Buttons */}
-                            <div className="d-flex gap-2 gap-lg-3 flex-wrap justify-content-start mt-4 mb-5 mb-lg-0">
+                            <div className="d-flex gap-2 gap-lg-3 flex-wrap justify-content-start mt-4">
                                 <Button
                                     onClick={handleScrollToForm}
                                     className="theme-dark-btn px-3 px-md-4 py-3 py-md-3"
@@ -100,35 +100,40 @@ function WarehouseBanner() {
                         </div>
 
                         {/* Right Side Form Card */}
-                        <div className="col-lg-5 col-md-12">
+                        <div className="col-lg-5 col-md-12 order-1 order-md-2 mb-4 mb-md-0">
                             <div className="card">
                                 <h4 className="mb-4 text-center text-white fw-bold">GET YOUR WAREHOUSE QUOTE</h4>
                                 <form id="warehouse-quote-form" className="track-form" action="thankyou.html" method="GET">
                                     
-                                    <input 
-                                        type="text" 
-                                        id="form-name" 
-                                        name="name" 
-                                        className="form-control" 
-                                        placeholder="Full Name*" 
-                                        required 
-                                    />
+                                    <div className="row g-2 w-100 m-0 p-0">
+                                        <div className="col-6 p-0 pe-1">
+                                            <input 
+                                                type="text" 
+                                                id="form-name" 
+                                                name="name" 
+                                                className="form-control" 
+                                                placeholder="Your name" 
+                                                required 
+                                            />
+                                        </div>
+                                        <div className="col-6 p-0 ps-1">
+                                            <input 
+                                                type="email" 
+                                                id="form-email" 
+                                                name="email" 
+                                                className="form-control" 
+                                                placeholder="you@example.com" 
+                                                required 
+                                            />
+                                        </div>
+                                    </div>
                                     
                                     <input 
                                         type="tel" 
                                         id="form-phone" 
                                         name="phone" 
                                         className="form-control" 
-                                        placeholder="Phone Number*" 
-                                        required 
-                                    />
-                                    
-                                    <input 
-                                        type="email" 
-                                        id="form-email" 
-                                        name="email" 
-                                        className="form-control" 
-                                        placeholder="Email Address*" 
+                                        placeholder="+91 00000 00000" 
                                         required 
                                     />
                                     
@@ -139,7 +144,7 @@ function WarehouseBanner() {
                                         required 
                                         defaultValue=""
                                     >
-                                        <option value="" disabled>Storage Requirement*</option>
+                                        <option value="" disabled>Select storage requirement</option>
                                         <option value="Less than 1,000 sq. ft.">Less than 1,000 sq. ft.</option>
                                         <option value="1,000 - 5,000 sq. ft.">1,000 - 5,000 sq. ft.</option>
                                         <option value="5,000 - 10,000 sq. ft.">5,000 - 10,000 sq. ft.</option>
@@ -154,7 +159,7 @@ function WarehouseBanner() {
                                         required 
                                         defaultValue=""
                                     >
-                                        <option value="" disabled>Monthly Volume (Approx.)*</option>
+                                        <option value="" disabled>Select monthly volume</option>
                                         <option value="Less than 500 orders">Less than 500 orders</option>
                                         <option value="500 - 2,000 orders">500 - 2,000 orders</option>
                                         <option value="2,000 - 5,000 orders">2,000 - 5,000 orders</option>

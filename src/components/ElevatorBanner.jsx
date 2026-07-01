@@ -28,7 +28,7 @@ function ElevatorBanner() {
                 <div className="banner-wrapper">
                     <div className="row align-items-center g-0 g-md-5">
                         {/* Left Side Content */}
-                        <div className="col-lg-7">
+                        <div className="col-lg-7 order-2 order-md-1">
                             <h1 className="fw-bold display-6 mb-3 text-uppercase text-white text-start">
                                 Safe, Precise & On-Time Elevator Logistics Solutions
                             </h1>
@@ -82,7 +82,7 @@ function ElevatorBanner() {
                             </div>
 
                             {/* Buttons */}
-                            <div className="d-flex gap-2 gap-lg-3 flex-wrap justify-content-start mt-4 mb-5 mb-lg-0">
+                            <div className="d-flex gap-2 gap-lg-3 flex-wrap justify-content-start mt-4">
                                 <Button
                                     onClick={handleScrollToForm}
                                     className="theme-dark-btn px-3 px-md-4 py-3 py-md-3"
@@ -100,35 +100,40 @@ function ElevatorBanner() {
                         </div>
 
                         {/* Right Side Form Card */}
-                        <div className="col-lg-5 col-md-12">
+                        <div className="col-lg-5 col-md-12 order-1 order-md-2 mb-4 mb-md-0">
                             <div className="card">
                                 <h4 className="mb-4 text-center text-white fw-bold">Request a Quote</h4>
                                 <form id="elevator-quote-form" className="track-form" action="thankyou.html" method="GET">
                                     
-                                    <input 
-                                        type="text" 
-                                        id="form-name" 
-                                        name="name" 
-                                        className="form-control" 
-                                        placeholder="Full Name*" 
-                                        required 
-                                    />
+                                    <div className="row g-2 w-100 m-0 p-0">
+                                        <div className="col-6 p-0 pe-1">
+                                            <input 
+                                                type="text" 
+                                                id="form-name" 
+                                                name="name" 
+                                                className="form-control" 
+                                                placeholder="Your name" 
+                                                required 
+                                            />
+                                        </div>
+                                        <div className="col-6 p-0 ps-1">
+                                            <input 
+                                                type="email" 
+                                                id="form-email" 
+                                                name="email" 
+                                                className="form-control" 
+                                                placeholder="you@example.com" 
+                                                required 
+                                            />
+                                        </div>
+                                    </div>
                                     
                                     <input 
                                         type="tel" 
                                         id="form-phone" 
                                         name="phone" 
                                         className="form-control" 
-                                        placeholder="Phone Number*" 
-                                        required 
-                                    />
-                                    
-                                    <input 
-                                        type="email" 
-                                        id="form-email" 
-                                        name="email" 
-                                        className="form-control" 
-                                        placeholder="Email Address*" 
+                                        placeholder="+91 00000 00000" 
                                         required 
                                     />
                                     
@@ -139,7 +144,7 @@ function ElevatorBanner() {
                                         required 
                                         defaultValue=""
                                     >
-                                        <option value="" disabled>Primary Cargo Type*</option>
+                                        <option value="" disabled>Select cargo type</option>
                                         <option value="Complete Elevator Units">Complete Elevator Units</option>
                                         <option value="Escalators / Moving Walks">Escalators / Moving Walks</option>
                                         <option value="Motors & Heavy Machinery">Motors & Heavy Machinery</option>
@@ -154,7 +159,7 @@ function ElevatorBanner() {
                                         required 
                                         defaultValue=""
                                     >
-                                        <option value="" disabled>Estimated Payload Weight*</option>
+                                        <option value="" disabled>Select estimated weight</option>
                                         <option value="Less than 2 Tons">Less than 2 Tons</option>
                                         <option value="2 - 5 Tons">2 - 5 Tons</option>
                                         <option value="5 - 10 Tons">5 - 10 Tons</option>
