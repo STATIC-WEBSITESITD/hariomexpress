@@ -2328,3 +2328,93 @@ ul {
         line-height: 1.2 !important;
     }
 }
+
+/* Shared Timeline Process Component Styles */
+.logistics-timeline-section {
+    background-color: #f8fafc;
+    position: relative;
+}
+.logistics-timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto 0;
+    padding-left: 55px;
+}
+/* Vertical track line */
+.logistics-timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 23px;
+    top: 10px;
+    bottom: 10px;
+    width: 4px;
+    background: linear-gradient(to bottom, #ee2a26 0%, #1a4a8a 100%);
+    border-radius: 4px;
+}
+.logistics-timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+.logistics-timeline-item:last-child {
+    margin-bottom: 0;
+}
+/* Bouncing step circle */
+.logistics-timeline-badge {
+    position: absolute;
+    left: -55px;
+    top: 4px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    border: 4px solid #1a4a8a;
+    color: #ee2a26;
+    font-size: 20px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 2;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+/* Card styling */
+.logistics-timeline-content {
+    background: #fff;
+    border-radius: 20px;
+    padding: 28px 32px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-left: 6px solid #1a4a8a;
+    text-align: left;
+}
+.logistics-timeline-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+.logistics-timeline-text {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+/* Interactive Hover Effects */
+.logistics-timeline-item:hover .logistics-timeline-badge {
+    background: #ee2a26;
+    color: #fff;
+    border-color: #ee2a26;
+    transform: scale(1.2);
+    box-shadow: 0 6px 20px rgba(238, 42, 38, 0.4);
+}
+.logistics-timeline-item:hover .logistics-timeline-content {
+    transform: translateX(12px);
+    border-left-color: #ee2a26;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+.logistics-timeline-item:hover .logistics-timeline-title {
+    color: #ee2a26;
+}

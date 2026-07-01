@@ -13,6 +13,8 @@ import SolutionDetailPage from './pages/SolutionDetailPage'
 import { solutions } from './data/solutions'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
+import ElevatorLogistics from './pages/ElevatorLogistics'
+import WarehouseLogistics from './pages/WarehouseLogistics'
 
 function App() {
   return (
@@ -32,6 +34,9 @@ function App() {
       <Route path="/shipping-policy" element={<PolicyPage />} />
       <Route path="/blogs" element={<BlogsPage />} />
       <Route path="/blog/:slug" element={<BlogDetailPage />} />
+      <Route path="/elevator-logistics" element={<ElevatorLogistics />} />
+      <Route path="/warehouse-services" element={<WarehouseLogistics />} />
+      <Route path="/warehousing-fulfillment" element={<Navigate to="/warehouse-services" replace />} />
       <Route path="*" element={<Navigate to="/" replace />} />
       {solutions.map((solution) => (
         <Route
