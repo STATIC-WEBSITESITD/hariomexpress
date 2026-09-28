@@ -27,6 +27,8 @@ function TrackingAccordionItem({ docket, searchSelected, isActive, onToggle }) {
   const bookingDate = formatDate(new Date(info[1][1]))
   const deliveryDate = formatDeliveryDate(info[5][1])
   const deliveryTime = info[5][1] ? info[5][1].split(' ')[1] : ''
+  const expectedDate = formatDeliveryDate(docket.expected_datetime)
+  const expectedTime = formatEventTime(docket.expected_datetime)
 
   return (
     <div className="tracking-data-accordion-item">
@@ -59,7 +61,7 @@ function TrackingAccordionItem({ docket, searchSelected, isActive, onToggle }) {
             <table>
               <thead>
                 <tr>
-                  <td colSpan={11}>
+                  <td colSpan={13}>
                     <b>Tracking Information</b>
                   </td>
                 </tr>
@@ -70,6 +72,8 @@ function TrackingAccordionItem({ docket, searchSelected, isActive, onToggle }) {
                   <th>Destination</th>
                   <th>No. of Pieces</th>
                   <th>Status</th>
+                  <th>Expected Delivery Date</th>
+                  <th>Expected Delivery Time</th>
                   <th>Delivery Date</th>
                   <th>Delivery Time</th>
                   <th>Receiver Name</th>
@@ -85,6 +89,8 @@ function TrackingAccordionItem({ docket, searchSelected, isActive, onToggle }) {
                   <td>{info[3][1]}</td>
                   <td>{docket.pcs ?? ''}</td>
                   <td>{info[4][1]}</td>
+                  <td>{expectedDate}</td>
+                  <td>{expectedTime}</td>
                   <td>{deliveryDate}</td>
                   <td>{deliveryTime}</td>
                   <td>{info[6][1]}</td>
