@@ -4,8 +4,21 @@ const API_BASE =
 const API_QUERY =
   'customer_code=superadmin&company=hariom-express-logistics-solution&api_company_id=5'
 
+function isBlankDateValue(value) {
+  if (value == null) return true
+  const text = String(value).trim()
+  return (
+    text === '' ||
+    text === 'undefined' ||
+    text === 'null' ||
+    text.startsWith('0000-00-00')
+  )
+}
+
 export function formatDate(date) {
   if (!(date instanceof Date) || Number.isNaN(date.getTime())) return ' '
+  // new Date(null) and other empty timestamps resolve to 1 Jan 1970.
+  if (date.getTime() === 0 || date.getFullYear() <= 1970) return ' '
   const day = date.getDate()
   const monthIndex = date.getMonth()
   const year = date.getFullYear()
@@ -43,14 +56,15 @@ export function getDocketLabel(docket, searchSelected) {
 }
 
 export function formatDeliveryDate(value) {
+  if (isBlankDateValue(value)) return ' '
   const d = new Date(value)
-  if (Number.isNaN(d.getTime()) || value === 'undefined') return ' '
+  if (Number.isNaN(d.getTime())) return ' '
   return formatDate(d)
 }
 
 export function formatEventTime(eventAt) {
-  if (!eventAt) return ' '
-  const parts = eventAt.split(' ')
+  if (isBlankDateValue(eventAt)) return ' '
+  const parts = String(eventAt).split(' ')
   return parts[1] ? parts[1].slice(0, 5) : ' '
 }
 
